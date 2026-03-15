@@ -41,6 +41,14 @@ For the body, I used fusion 360 to give it a cloud shaped body. The holes on the
 This is the link to getting the full .f3d file for the body:
 [Download the Fusion 360 body file](GEM_Model_f3d.f3d)
 
-#Test code
+# Initial Arduino code
+[This code](GEM_initial_code.ino) is an initial code for the the different parts.
+In this code some of the things have not been filled for privacy reasons such as 
+- my wifi id
+- my wifi password
+- my gemini api key and url.
 
-#BOM with links
+The Emotion_API is simply the address the ESP32 uses to reach my Python emotion server running on my PC.
+I'm currently still working on the emotion model, but it would be something similar to my [book review model](https://github.com/Chiamanda07/ML_bookReview_Project) I made some time ago, but with much more labels (emotions).
+
+# BOM
