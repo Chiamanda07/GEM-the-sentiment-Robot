@@ -1,5 +1,42 @@
 # GEM-the-sentiment-Robot
-This robot embodies an AI system by integrating the Gemini API with an ESP32 allowing someone to talk to it and get a response back. The robot's facial expressions are connected to a sentiment analysis model to interpret different emotions. I'm using this project to explore how natural language processing can help robots better understand human emotion and communication.
+This robot embodies an AI system by integrating the Gemini API with an ESP32 allowing someone to talk to it and get a response back. The robot's facial expressions are connected to a sentiment analysis model to interpret different emotions. I'm using this project to explore how natural language processing can help robots better understand human emotion and communication. Here's what's happening behind the scenes, step by step:
+
+
+
+### 1. Listening to Your Voice
+When the robot is on, it starts recording through a small digital microphone (INMP441). It captures 4 seconds of audio and stores it in memory on the ESP32-S3 — a tiny but powerful Wi-Fi-enabled microcontroller that acts as the robot's brain.
+
+### 2. Sending Your Words to Gemini
+The recorded audio is sent over Wi-Fi to **Google's Gemini AI**. Gemini listens to what you said, understands it, and writes back a response in plain text.
+
+### 3. Figuring Out the Emotion
+The text response from Gemini is then sent to a **custom-trained sentiment analysis model** (running as a small server on a PC). This model is trained to read text and decide what emotion to convey — happy, sad, surprised, thinking, or neutral. It was built with Python and saved as a `.pkl` (pickle) file.
+
+### 4. Showing the Emotion on Screen
+Once the robot knows the emotion, it draws a matching face on a **round 1.28" color display** (GC9A01 driver, 240×240 pixels). Each face is drawn in real time using colored shapes.
+
+### 5. 🔊 Speaking the Response
+The text response from Gemini will be converted to speech and played through a small speaker using a MAX98357A audio amplifier.
+
+---
+
+### The Full Pipeline
+
+```
+You speak
+   ↓
+Microphone captures audio
+   ↓
+ESP32-S3 sends audio → Gemini AI (generates text response)
+   ↓
+Text sent → Sentiment Model (detects emotion)
+   ↓
+Emotion → Round display draws a face
+   ↓
+Response text → Speaker (plays audio response)
+```
+
+Everything runs in a loop!
 
 # Electronic Aspect
 For the electrical components I'm using a 
