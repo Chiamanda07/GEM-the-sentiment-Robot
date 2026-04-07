@@ -10,7 +10,7 @@ When the robot is on, it starts recording through a small digital microphone (IN
 The recorded audio is sent over Wi-Fi to **Google's Gemini AI**. Gemini listens to what you said, understands it, and writes back a response in plain text.
 
 ### 3. Figuring Out the Emotion
-The text response from Gemini is then sent to a **custom-trained sentiment analysis model** (running as a small server on a PC). This model is trained to read text and decide what emotion to convey — happy, sad, surprised, thinking, or neutral. It was built with Python and saved as a `.pkl` (pickle) file.
+The text response from Gemini is then sent to a **custom-trained sentiment analysis model** (running as a small server on a PC). This model is trained to read text and decide what emotion to convey: happy, sad, surprised, thinking, or neutral. <!--It was built with Python and saved as a `.pkl` (pickle) file.-->
 
 ### 4. Showing the Emotion on Screen
 Once the robot knows the emotion, it draws a matching face on a **round 1.28" color display** (GC9A01 driver, 240×240 pixels). Each face is drawn in real time using colored shapes.
