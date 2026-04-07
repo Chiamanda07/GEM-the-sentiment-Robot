@@ -15,7 +15,7 @@ The text response from Gemini is then sent to a **custom-trained sentiment analy
 ### 4. Showing the Emotion on Screen
 Once the robot knows the emotion, it draws a matching face on a **round 1.28" color display** (GC9A01 driver, 240×240 pixels). Each face is drawn in real time using colored shapes.
 
-### 5. 🔊 Speaking the Response
+### 5.  Speaking the Response
 The text response from Gemini will be converted to speech and played through a small speaker using a MAX98357A audio amplifier.
 
 ---
