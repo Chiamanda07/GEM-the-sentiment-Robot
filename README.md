@@ -4,7 +4,7 @@ This robot embodies an AI system by integrating the Gemini API with an ESP32 all
 
 
 ### 1. Listening to Your Voice
-When the robot is on, it starts recording through a small digital microphone (INMP441). It captures 4 seconds of audio and stores it in memory on the ESP32-S3 — a tiny but powerful Wi-Fi-enabled microcontroller that acts as the robot's brain.
+When the robot is on, it starts recording through a small digital microphone (INMP441). It captures 4 seconds of audio and stores it in memory on the ESP32-S3.
 
 ### 2. Sending Your Words to Gemini
 The recorded audio is sent over Wi-Fi to **Google's Gemini AI**. Gemini listens to what you said, understands it, and writes back a response in plain text.
