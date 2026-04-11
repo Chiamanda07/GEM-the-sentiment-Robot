@@ -74,6 +74,7 @@ I couldn't really find a simulation software that had all the parts to show the 
 
 # The Body of GEM
 For the body, I used fusion 360 to give it a cloud shaped body. The holes on the model are for the face(TFT Display screen), microphone, and speaker.
+The body of Gem is open at the back for now in order to put the breadboard and parts of it in there.
 ![Cloud body model](Model_picture.png)
 This is the link to getting the full .f3d file for the body:
 [Download the Fusion 360 body file](GEM_Model_f3d.f3d)
